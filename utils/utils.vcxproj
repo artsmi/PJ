@@ -81,7 +81,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Logs.h" />
+    <ClInclude Include="logging.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="logging.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

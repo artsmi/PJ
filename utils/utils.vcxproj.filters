@@ -18,7 +18,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Logs.h">
+    <ClCompile Include="logging.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="logging.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

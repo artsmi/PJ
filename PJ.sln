@@ -6,11 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "start", "start\start.vcxproj", "{7F71BEE6-BBC0-4AB7-B093-472C7ADA3C67}"
 	ProjectSection(ProjectDependencies) = postProject
 		{59EDA427-9CE2-4621-91DE-21004D6A56CA} = {59EDA427-9CE2-4621-91DE-21004D6A56CA}
+		{470A17AB-BC18-47F1-AF36-5DB2C27410EA} = {470A17AB-BC18-47F1-AF36-5DB2C27410EA}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcxproj", "{59EDA427-9CE2-4621-91DE-21004D6A56CA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsWatcher", "WindowsWatcher\WindowsWatcher.vcxproj", "{470A17AB-BC18-47F1-AF36-5DB2C27410EA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "windowswatcher", "WindowsWatcher\WindowsWatcher.vcxproj", "{470A17AB-BC18-47F1-AF36-5DB2C27410EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59EDA427-9CE2-4621-91DE-21004D6A56CA} = {59EDA427-9CE2-4621-91DE-21004D6A56CA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,11 +1,4 @@
-#pragma once
-
-#include "windows.h"
-
-#include <stdio.h>
-#include <stdarg.h>
-
-using namespace std;
+#include "logging.h"
 
 namespace Logging
 {

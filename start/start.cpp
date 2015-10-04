@@ -10,7 +10,8 @@
 #include <atomic> 
 #include <mutex>
 
-#include "../utils/Logs.h"
+#include "../windowswatcher/window.h"
+#include "../utils/logging.h"
 
 using namespace std;
 using namespace Logging;
@@ -30,6 +31,11 @@ BOOL CALLBACK EnumWindowsForOne(HWND hwnd, LPARAM lParam)
 	{
 		Log("enum: 0x%X \t %s \t I found It!\n", hwnd, strClassName.c_str());
 		gTargetWindow.store(hwnd);
+
+		Window window;
+		if(window.Init(hwnd))
+			window.Normilize();
+
 		return FALSE;
 	}
 
