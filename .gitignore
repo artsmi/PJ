@@ -1,6 +1,6 @@
 bin/
 *.opensdf
 *.suo
-*.sdf
+PJ.sdf
 */debug/
 */release/

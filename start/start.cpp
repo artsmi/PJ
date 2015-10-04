@@ -14,6 +14,7 @@ using namespace std;
 
 const string gStrTargetClassName = "PokerStarsTableFrameClass";
 atomic<HWND> gTargetWindow = 0x0;
+atomic<bool> gNeedPrint = true;
 
 void Log(char * format, ...)
 {
@@ -25,7 +26,7 @@ void Log(char * format, ...)
 	va_end(args);
 }
 
-BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
+BOOL CALLBACK EnumWindowsForOne(HWND hwnd, LPARAM lParam)
 {
 	string strClassName("");
 	strClassName.resize(MAX_PATH);
@@ -35,23 +36,17 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
 	else if (string::npos != strClassName.find(gStrTargetClassName.c_str()))
 	{
 		Log("enum: 0x%X \t %s \t I found It!\n", hwnd, strClassName.c_str());
-		gTargetWindow.store(hwnd); 
-
-		/*RECT wndPos = {};
-		if (!GetWindowRect(hwnd, &wndPos))
-		printf("enum: 0x%X \t - false [GWR: 0x%X]\n", hwnd, GetLastError());
-		else
-		{
-		SetCursorPos(wndPos.left, wndPos.top);
-		Sleep(1000);
-		}*/
+		gTargetWindow.store(hwnd);
+		return FALSE;
 	}
-
 
 	return TRUE;
 }
-
-atomic<bool> gNeedPrint = true;
+ 
+void SearchWindow()
+{
+	EnumWindows(&EnumWindowsForOne, 0x0);
+}
 
 void PrintCursorPos()
 {
@@ -93,10 +88,12 @@ void PrintCursorPos()
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	EnumWindows(&EnumWindowsProc, 0x0);
+	SearchWindow();
 
+	/*
 	std::thread threadCursorPos(PrintCursorPos);
 	threadCursorPos.detach();
+	*/
 
 	system("pause");
 
