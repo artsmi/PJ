@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "start", "start\start.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcxproj", "{59EDA427-9CE2-4621-91DE-21004D6A56CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowsWatcher", "WindowsWatcher\WindowsWatcher.vcxproj", "{470A17AB-BC18-47F1-AF36-5DB2C27410EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -24,6 +26,10 @@ Global
 		{59EDA427-9CE2-4621-91DE-21004D6A56CA}.Debug|Win32.Build.0 = Debug|Win32
 		{59EDA427-9CE2-4621-91DE-21004D6A56CA}.Release|Win32.ActiveCfg = Release|Win32
 		{59EDA427-9CE2-4621-91DE-21004D6A56CA}.Release|Win32.Build.0 = Release|Win32
+		{470A17AB-BC18-47F1-AF36-5DB2C27410EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{470A17AB-BC18-47F1-AF36-5DB2C27410EA}.Debug|Win32.Build.0 = Debug|Win32
+		{470A17AB-BC18-47F1-AF36-5DB2C27410EA}.Release|Win32.ActiveCfg = Release|Win32
+		{470A17AB-BC18-47F1-AF36-5DB2C27410EA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
