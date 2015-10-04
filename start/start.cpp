@@ -10,21 +10,14 @@
 #include <atomic> 
 #include <mutex>
 
+#include "../utils/Logs.h"
+
 using namespace std;
+using namespace Logging;
 
 const string gStrTargetClassName = "PokerStarsTableFrameClass";
 atomic<HWND> gTargetWindow = 0x0;
 atomic<bool> gNeedPrint = true;
-
-void Log(char * format, ...)
-{
-	char buffer[500];
-	va_list args;
-	va_start(args, format);
-	vsprintf(buffer, format, args);
-	printf("[0x%X]: %s\n", GetCurrentThreadId(), buffer);
-	va_end(args);
-}
 
 BOOL CALLBACK EnumWindowsForOne(HWND hwnd, LPARAM lParam)
 {
