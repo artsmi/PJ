@@ -35,7 +35,7 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
 	else if (string::npos != strClassName.find(gStrTargetClassName.c_str()))
 	{
 		Log("enum: 0x%X \t %s \t I found It!\n", hwnd, strClassName.c_str());
-		gTargetWindow.store(hwnd);
+		gTargetWindow.store(hwnd); 
 
 		/*RECT wndPos = {};
 		if (!GetWindowRect(hwnd, &wndPos))
